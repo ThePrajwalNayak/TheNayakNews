@@ -1,0 +1,55 @@
+/* line 1, ../../app/styles/film.scss */
+#film-content {
+  background-color: yellowgreen;
+}
+/* line 3, ../../app/styles/film.scss */
+#film-content #filmArticle {
+  background-color: green;
+}
+/* line 5, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft {
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+/* line 12, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+/* line 15, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage {
+  width: 100%;
+  height: auto;
+}
+/* line 19, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage:hover {
+  cursor: pointer;
+}
+/* line 24, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight {
+  margin-right: 20px;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+/* line 32, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight .filmRightArticles {
+  margin: 100px 10px;
+  padding: 10px;
+}
+/* line 35, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage {
+  width: 100%;
+  height: auto;
+}
+/* line 39, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=film.css.map */
