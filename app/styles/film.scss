@@ -1,0 +1,45 @@
+#film-content {
+  background-color: yellowgreen;
+  #filmArticle {
+    background-color: green;
+    #filmLeft {
+      //https://www.bootply.com/5l9bZ7ZOt6
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      left: 0;
+      overflow-y: scroll;
+      .filmLeftArticles {
+        margin: 10px 0 0 0;
+        padding: 10px;
+        .filmLeftArticlesImage {
+          width: 100%;
+          height: auto;
+        }
+        .filmLeftArticlesImage:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    #filmRight {
+      margin-right: 20px;
+      background-color: yellowgreen;
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      right: 0;
+      overflow-y: scroll;
+      .filmRightArticles {
+        margin: 100px 10px;
+        padding: 10px;
+        .filmRightArticlesImage {
+          width: 100%;
+          height: auto;
+        }
+        .filmRightArticlesImage:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

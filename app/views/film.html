@@ -1,0 +1,25 @@
+<div id="film-content">
+    <div id="filmArticle" class="row">
+        <div id="filmLeft" class="col-md-7">
+            <div class="filmLeftArticles" ng-repeat="filmLeftArticle in filmLeftArticles">
+                <blockquote>
+                <h1>{{filmLeftArticle.title}}</h1>
+                 <h4>-{{filmLeftArticle.author}}</h4>
+                </blockquote>
+                <img class="filmLeftArticlesImage" ng-src="{{filmLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmLeftArticle.url)" target="_blank" />
+                <p class="filmLeftArticlesDescription">{{filmLeftArticle.description}}<p>
+            </div>
+        </div>
+        <div  id="filmRight" class="col-md-4">
+            <h2>Top Headlines</h2>
+           <div class="filmRightArticles" ng-repeat="filmRightArticle in filmRightArticles">
+                <blockquote>
+                <h1>{{filmRightArticle.title}}</h1>
+                 <h4>-{{filmRightArticle.author}}</h4>
+                </blockquote>
+                <img class="filmRightArticlesImage" ng-src="{{filmRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmRightArticle.url)" target="_blank" />
+                <p class="filmRightArticlesDescription">{{filmRightArticle.description}}<p>
+            </div>
+        </div>
+    </div>
+</div>
