@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', '$rootScope', '$state',,function ($scope, webService, $rootScope, $state) {
+angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', '$rootScope', '$state',function ($scope, webService, $rootScope, $state) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var techRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
