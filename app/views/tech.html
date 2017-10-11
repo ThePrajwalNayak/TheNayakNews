@@ -1,24 +1,24 @@
 <div id="tech-content">
-    <div id="filmArticle" class="row">
-        <div id="filmLeft" class="col-md-7">
-            <div class="filmLeftArticles" ng-repeat="filmLeftArticle in sportsLeftArticles">
+    <div id="techArticle" class="row">
+        <div id="techLeft" class="col-md-7">
+            <div class="techLeftArticles" ng-repeat="techLeftArticle in sportsLeftArticles">
                 <blockquote>
-                <h1>{{filmLeftArticle.title}}</h1>
-                 <h4>-{{filmLeftArticle.author}}</h4>
+                <h1>{{techLeftArticle.title}}</h1>
+                 <h4>-{{techLeftArticle.author}}</h4>
                 </blockquote>
-                <img class="filmLeftArticlesImage" ng-src="{{filmLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmLeftArticle.url)" target="_blank" />
-                <p class="filmLeftArticlesDescription">{{filmLeftArticle.description}}<p>
+                <img class="techLeftArticlesImage" ng-src="{{techLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(techLeftArticle.url)" target="_blank" />
+                <p class="techLeftArticlesDescription">{{techLeftArticle.description}}<p>
             </div>
         </div>
-        <div  id="filmRight" class="col-md-4">
+        <div  id="techRight" class="col-md-4">
             <h2>Top Headlines</h2>
-           <div class="filmRightArticles" ng-repeat="filmRightArticle in sportsRightArticles">
+           <div class="techRightArticles" ng-repeat="techRightArticle in sportsRightArticles">
                 <blockquote>
-                <h1>{{filmRightArticle.title}}</h1>
-                 <h4>-{{filmRightArticle.author}}</h4>
+                <h1>{{techRightArticle.title}}</h1>
+                 <h4>-{{techRightArticle.author}}</h4>
                 </blockquote>
-                <img class="filmRightArticlesImage" ng-src="{{filmRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmRightArticle.url)" target="_blank" />
-                <p class="filmRightArticlesDescription">{{filmRightArticle.description}}<p>
+                <img class="techRightArticlesImage" ng-src="{{techRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(techRightArticle.url)" target="_blank" />
+                <p class="techRightArticlesDescription">{{techRightArticle.description}}<p>
             </div>
         </div>
     </div>

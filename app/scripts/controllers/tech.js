@@ -4,13 +4,13 @@
 angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', function ($scope, webService) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
-  var filmRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
-  var filmLeftUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=" + apiKey;
+  var techRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
+  var techLeftUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=" + apiKey;
   initialize();
 
   function initialize() {
-    prepareSportsLeftData(filmLeftUrl);
-    prepareSportsRightData(filmRightUrl);
+    prepareSportsLeftData(techLeftUrl);
+    prepareSportsRightData(techRightUrl);
   }
 
   function prepareSportsLeftData(url) {
@@ -19,7 +19,7 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
         $scope.sportsLeftArticles = [];
         if (angular.isDefined(response.data.articles)) {
           angular.forEach(response.data.articles, function (value, key) {
-            var filmNews = {
+            var techNews = {
               author: value.author,
               title: value.title,
               description: value.description,
@@ -27,7 +27,7 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
               urlToImage: value.urlToImage,
               publishedAt: value.publishedAt
             }
-            $scope.sportsLeftArticles.push(filmNews);
+            $scope.sportsLeftArticles.push(techNews);
           })
         }
       },
@@ -42,7 +42,7 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
         $scope.sportsRightArticles = [];
         if (angular.isDefined(response.data.articles)) {
           angular.forEach(response.data.articles, function (value, key) {
-            var filmNews = {
+            var techNews = {
               author: value.author,
               title: value.title,
               description: value.description,
@@ -50,7 +50,7 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
               urlToImage: value.urlToImage,
               publishedAt: value.publishedAt
             }
-            $scope.sportsRightArticles.push(filmNews);
+            $scope.sportsRightArticles.push(techNews);
           })
         }
       },

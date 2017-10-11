@@ -4,13 +4,13 @@
 angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webService', function ($scope, webService) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
-  var filmRightUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=top&apiKey=" + apiKey;
-  var filmLeftUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=latest&apiKey=" + apiKey;
+  var sportsRightUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=top&apiKey=" + apiKey;
+  var sportsLeftUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=latest&apiKey=" + apiKey;
   initialize();
 
   function initialize() {
-    prepareSportsLeftData(filmLeftUrl);
-    prepareSportsRightData(filmRightUrl);
+    prepareSportsLeftData(sportsLeftUrl);
+    prepareSportsRightData(sportsRightUrl);
   }
 
   function prepareSportsLeftData(url) {
@@ -19,7 +19,7 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
         $scope.sportsLeftArticles = [];
         if (angular.isDefined(response.data.articles)) {
           angular.forEach(response.data.articles, function (value, key) {
-            var filmNews = {
+            var sportsNews = {
               author: value.author,
               title: value.title,
               description: value.description,
@@ -27,7 +27,7 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
               urlToImage: value.urlToImage,
               publishedAt: value.publishedAt
             }
-            $scope.sportsLeftArticles.push(filmNews);
+            $scope.sportsLeftArticles.push(sportsNews);
           })
         }
       },
@@ -42,7 +42,7 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
         $scope.sportsRightArticles = [];
         if (angular.isDefined(response.data.articles)) {
           angular.forEach(response.data.articles, function (value, key) {
-            var filmNews = {
+            var sportsNews = {
               author: value.author,
               title: value.title,
               description: value.description,
@@ -50,7 +50,7 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
               urlToImage: value.urlToImage,
               publishedAt: value.publishedAt
             }
-            $scope.sportsRightArticles.push(filmNews);
+            $scope.sportsRightArticles.push(sportsNews);
           })
         }
       },
