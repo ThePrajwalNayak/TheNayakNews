@@ -25,13 +25,14 @@
 
     <!-- NAVIGATION -->
   <nav class="navHeader navbar navbar-inverse" role="navigation">
-    <div class="navbar-header">
-      <a class="navbar-brand" ui-sref="home">NEWS LETTER</a>
+    <div class="navbar-header" style="margin-right: 200px">
+      <a class="navbar-brand" ui-sref="home">The Nayak News</a>
+      <img style="position : absolute; top : 15px; left : 160px;" src="images/favIcon.png" width="20" height="20"/>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a ui-sref="film">FILM</a></li>
-      <li><a ui-sref="tech">TECH</a></li>
-      <li><a ui-sref="sports">SPORTS</a></li>
+    <ul class="nav navbar-nav" ng-controller="navController">
+      <li ng-class="{ active: isCurrentPath('/film') }"><a  ui-sref="film">FILM</a></li>
+      <li ng-class="{ active: isCurrentPath('/tech') }"><a ui-sref="tech">TECH</a></li>
+      <li ng-class="{ active: isCurrentPath('/sports') }"><a  ui-sref="sports">SPORTS</a></li>
     </ul>
   </nav>
 
@@ -39,10 +40,6 @@
   <!-- Add your site or application content here -->
   <div ui-view>
   </div>
-
-
-
-   
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -66,6 +63,7 @@
         <script src="scripts/controllers/film.js"></script>
         <script src="scripts/controllers/sports.js"></script>
         <script src="scripts/controllers/tech.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>
