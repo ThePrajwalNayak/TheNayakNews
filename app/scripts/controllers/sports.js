@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webService', function ($scope, webService) {
+angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webService', '$rootScope', '$state', function ($scope, webService, $rootScope, $state) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var sportsRightUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=top&apiKey=" + apiKey;
@@ -9,8 +9,12 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
   initialize();
 
   function initialize() {
+    if($rootScope.loggedIn){
     prepareSportsLeftData(sportsLeftUrl);
     prepareSportsRightData(sportsRightUrl);
+    }else{
+      $state.go('home');
+    }
   }
 
   function prepareSportsLeftData(url) {

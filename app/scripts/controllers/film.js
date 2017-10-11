@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module('TheNayakNews').controller('filmController', ['$scope', 'webService', function ($scope, webService) {
+angular.module('TheNayakNews').controller('filmController', ['$scope', 'webService', '$rootScope', '$state',  function ($scope, webService,$rootScope, $state) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var filmRightUrl = "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=" + apiKey;
@@ -9,8 +9,12 @@ angular.module('TheNayakNews').controller('filmController', ['$scope', 'webServi
   initialize();
 
   function initialize() {
+    if($rootScope.loggedIn){
     prepareFilmLeftData(filmLeftUrl);
     prepareFilmRightData(filmRightUrl);
+  }else{
+      $state.go('home');
+    }
   }
 
   function prepareFilmLeftData(url) {
