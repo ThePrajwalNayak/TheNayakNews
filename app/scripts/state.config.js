@@ -1,7 +1,7 @@
 'use strict';
 angular.module('TheNayakNews').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, send to /business
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
         .state('home', {//State demonstrating Nested views
