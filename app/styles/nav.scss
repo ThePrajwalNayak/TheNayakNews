@@ -1,0 +1,16 @@
+#nav-content {
+    .navbar {
+        margin-bottom: 0 !important;
+        border-radius: 0;
+        #login {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        #logout {
+            position: absolute;
+            right: 20px;
+            top: 5px;
+        }
+    }
+}
