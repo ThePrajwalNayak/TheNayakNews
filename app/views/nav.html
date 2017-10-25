@@ -10,13 +10,5 @@
       <li ng-class="{ active: isCurrentPath('/tech') }"><a ui-sref="tech">TECH</a></li>
       <li ng-class="{ active: isCurrentPath('/sports') }"><a ui-sref="sports">SPORTS</a></li>
     </ul>
-    <div id="login" ng-show="!showLoginButton">
-      <input type="text" ng-model="username" placeholder="username">
-      <input type="password" ng-model="password" placeholder="password">
-      <button ng-click="validateUser()">Login</button>
-    </div>
-    <div id="logout" ng-show="showLoginButton">
-      <button ng-click="logout()">Logout</button>
-    </div>
   </nav>
 </div>

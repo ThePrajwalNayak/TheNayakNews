@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', '$rootScope', '$state',function ($scope, webService, $rootScope, $state) {
+angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', function ($scope, webService) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var techRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
@@ -9,32 +9,28 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
   initialize();
 
   function initialize() {
-    if($rootScope.loggedIn){
     prepareSportsLeftData(techLeftUrl);
     prepareSportsRightData(techRightUrl);
-     }else{
-      $state.go('home');
-    }
   }
 
   function prepareSportsLeftData(url) {
     var res = webService.getData(url);
     res.then(function (response) {
-        $scope.sportsLeftArticles = [];
-        if (angular.isDefined(response.data.articles)) {
-          angular.forEach(response.data.articles, function (value, key) {
-            var techNews = {
-              author: value.author,
-              title: value.title,
-              description: value.description,
-              url: value.url,
-              urlToImage: value.urlToImage,
-              publishedAt: value.publishedAt
-            }
-            $scope.sportsLeftArticles.push(techNews);
-          })
-        }
-      },
+      $scope.sportsLeftArticles = [];
+      if (angular.isDefined(response.data.articles)) {
+        angular.forEach(response.data.articles, function (value, key) {
+          var techNews = {
+            author: value.author,
+            title: value.title,
+            description: value.description,
+            url: value.url,
+            urlToImage: value.urlToImage,
+            publishedAt: value.publishedAt
+          }
+          $scope.sportsLeftArticles.push(techNews);
+        })
+      }
+    },
       function (response) {
 
       });
@@ -43,21 +39,21 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
   function prepareSportsRightData(url) {
     var res = webService.getData(url);
     res.then(function (response) {
-        $scope.sportsRightArticles = [];
-        if (angular.isDefined(response.data.articles)) {
-          angular.forEach(response.data.articles, function (value, key) {
-            var techNews = {
-              author: value.author,
-              title: value.title,
-              description: value.description,
-              url: value.url,
-              urlToImage: value.urlToImage,
-              publishedAt: value.publishedAt
-            }
-            $scope.sportsRightArticles.push(techNews);
-          })
-        }
-      },
+      $scope.sportsRightArticles = [];
+      if (angular.isDefined(response.data.articles)) {
+        angular.forEach(response.data.articles, function (value, key) {
+          var techNews = {
+            author: value.author,
+            title: value.title,
+            description: value.description,
+            url: value.url,
+            urlToImage: value.urlToImage,
+            publishedAt: value.publishedAt
+          }
+          $scope.sportsRightArticles.push(techNews);
+        })
+      }
+    },
       function (response) {
 
       });

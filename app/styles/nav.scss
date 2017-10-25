@@ -2,15 +2,17 @@
     .navbar {
         margin-bottom: 0 !important;
         border-radius: 0;
-        #login {
-            position: absolute;
-            right: 20px;
-            top: 10px;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    /* Styles */
+    #nav-content {
+        .navbar-brand {
+            margin-left: 5px;
         }
-        #logout {
-            position: absolute;
-            right: 20px;
-            top: 5px;
+        .navbar-nav {
+            margin-left: 10px;
         }
     }
 }
