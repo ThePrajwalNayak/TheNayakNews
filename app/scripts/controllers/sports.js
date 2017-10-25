@@ -4,7 +4,7 @@
 angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webService', function ($scope, webService) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
-  var sportsRightUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=top&apiKey=" + apiKey;
+  var sportsRightUrl = " https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=" + apiKey;
   var sportsLeftUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=latest&apiKey=" + apiKey;
   initialize();
 
