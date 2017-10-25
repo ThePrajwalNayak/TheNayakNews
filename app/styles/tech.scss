@@ -43,3 +43,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 384px) {
+  /* Styles */
+  #tech-content {
+    #techLeft {
+      width: 100%;
+      position: static !important;
+    }
+    #techRight {
+      width: 100%;
+      position: static !important;
+    }
+  }
+}

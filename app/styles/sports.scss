@@ -43,3 +43,18 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 384px) {
+  /* Styles */
+  #sports-content {
+    #sportsLeft {
+      width: 100%;
+      position: static !important;
+    }
+    #sportsRight {
+      width: 100%;
+      position: static !important;
+    }
+  }
+}
