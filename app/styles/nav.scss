@@ -2,6 +2,13 @@
     .navbar {
         margin-bottom: 0 !important;
         border-radius: 0;
+        .navbar-header {
+            img {
+                position: absolute;
+                top: 15px;
+                left: 160px;
+            }
+        }
     }
     #followNayak {
         float: right;
@@ -51,14 +58,30 @@
 @media only screen and (max-width: 384px) {
     /* Styles */
     #nav-content {
-        .navbar-brand {
-            margin-left: 5px;
+        .navbar-header {
+            img {
+  
+                left: 180px !important;
+            }
+            .navbar-brand {
+                margin-left: 5px;
+            }
         }
         .navbar-nav {
             margin-left: 10px;
         }
         ul li {
             width: 25%;
+        }
+        #followNayak {
+            h4 {
+                display: none;
+            }
+            float: none !important;
+            margin: 10px 0;
+            ul li {
+                width: 20%;
+            }
         }
     }
 }
