@@ -65,6 +65,6 @@ angular.module('TheNayakNews').controller('filmController', ['$scope', 'webServi
 
  
 $scope.backToTop = function() {
-          //$("html, body").animate({ scrollTop: 0 }, 1000);
+      $("html, body").animate({ scrollTop: 0 }, 1000);
       }
 }]);

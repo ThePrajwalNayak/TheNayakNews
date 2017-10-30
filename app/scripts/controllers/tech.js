@@ -62,4 +62,8 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
   $scope.redirectToOriginalSite = function (url) {
     window.open(url);
   }
+
+  $scope.backToTop = function(){
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+  }
 }]);

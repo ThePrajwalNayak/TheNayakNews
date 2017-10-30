@@ -1,7 +1,6 @@
 #tech-content {
-  background-color: yellowgreen;
   #techArticle {
-    background-color: green;
+    
     #techLeft {
       //https://www.bootply.com/5l9bZ7ZOt6
       position: absolute;
@@ -12,12 +11,27 @@
       .techLeftArticles {
         margin: 10px 0 0 0;
         padding: 10px;
+        blockquote{
+          h4{
+            span{
+              margin-right: 10px;
+            }
+          }
+        }
         .techLeftArticlesImage {
           width: 100%;
           height: auto;
         }
         .techLeftArticlesImage:hover {
           cursor: pointer;
+        }
+        .techLeftArticlesDescription{
+          margin-top: 10px;
+          word-spacing: 4px;
+          letter-spacing: 2px;
+          .continueReading{
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -29,8 +43,11 @@
       bottom: 0;
       right: 0;
       overflow-y: scroll;
+      h2{
+        text-align: center;
+      }
       .techRightArticles {
-        margin: 100px 10px;
+        margin: 50px 10px;
         padding: 10px;
         .techRightArticlesImage {
           width: 100%;
@@ -39,7 +56,27 @@
         .techRightArticlesImage:hover {
           cursor: pointer;
         }
+        .techRightArticlesDescription{
+          margin-top: 10px;
+                      word-spacing: 3px;
+            letter-spacing: 1px;
+          .continueReading{
+            margin-left: 10px;
+          }
+        }
       }
+    }
+    #techBackToTop {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #090909;
+      height: 50px;
+      font-size: larger;
+      letter-spacing: 2px;
+      background-color: #ef1313;
     }
   }
 }
@@ -54,6 +91,9 @@
     #techRight {
       width: 100%;
       position: static !important;
+    }
+    #techBackToTop{
+      display: block !important;
     }
   }
 }

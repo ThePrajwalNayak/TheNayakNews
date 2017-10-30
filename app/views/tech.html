@@ -4,10 +4,10 @@
             <div class="techLeftArticles" ng-repeat="techLeftArticle in sportsLeftArticles">
                 <blockquote>
                 <h1>{{techLeftArticle.title}}</h1>
-                 <h4>-{{techLeftArticle.author}}</h4>
+                 <h4><span>-</span>{{techLeftArticle.author}}</h4>
                 </blockquote>
                 <img class="techLeftArticlesImage" ng-src="{{techLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(techLeftArticle.url)" target="_blank" />
-                <p class="techLeftArticlesDescription">{{techLeftArticle.description}}<p>
+                <p class="techLeftArticlesDescription">{{techLeftArticle.description}}<span class="continueReading"><a href="{{techLeftArticle.url}}" target="_blank">Continue reading >></a></span><p>
             </div>
         </div>
         <div  id="techRight" class="col-md-4">
@@ -18,8 +18,9 @@
                  <h4>-{{techRightArticle.author}}</h4>
                 </blockquote>
                 <img class="techRightArticlesImage" ng-src="{{techRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(techRightArticle.url)" target="_blank" />
-                <p class="techRightArticlesDescription">{{techRightArticle.description}}<p>
+                <p class="techRightArticlesDescription">{{techRightArticle.description}}<span class="continueReading"><a href="{{techRightArticle.url}}" target="_blank">Continue reading >></a></span><p>
             </div>
         </div>
+        <button id="techBackToTop" type="button" scrollable ng-click="backToTop()">Back to Top</button>
     </div>
 </div>

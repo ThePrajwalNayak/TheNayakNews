@@ -23,10 +23,10 @@
                 </blockquote>
                 <img class="filmRightArticlesImage" ng-src="{{filmRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmRightArticle.url)"
                     target="_blank" />
-                <p class="filmRightArticlesDescription">{{filmRightArticle.description}}
+                <p class="filmRightArticlesDescription">{{filmRightArticle.description}}<span class="continueReading"><a href="{{filmRightArticle.url}}" target="_blank">Continue reading >></a></span>
                     <p>
             </div>
         </div>
-        <button style="position: fixed; bottom:0; left : 0" type="button" scrollable ng-click="backToTop()">Back to Top</button>
+        <button id="filmBackToTop" type="button" scrollable ng-click="backToTop()">Back to Top</button>
     </div>
 </div>

@@ -87,12 +87,31 @@
           width: 100%;
           height: auto;
         }
+        .filmRightArticlesDescription{
+          word-spacing: 2px;
+          letter-spacing: 1px;
+          .continueReading{
+            margin-left: 10px;
+          }
+        }
         .filmRightArticlesImage:hover {
           cursor: pointer;
           transform: scale(1.2);
           margin-bottom: 25px;
         }
       }
+    }
+    #filmBackToTop {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: #090909;
+      height: 50px;
+      font-size: larger;
+      letter-spacing: 2px;
+      background-color: #ef1313;
     }
   }
 }
@@ -107,6 +126,9 @@
     #filmRight {
       width: 100%;
       position: static !important;
+    }
+    #filmBackToTop{
+      display: block !important;
     }
   }
 }
