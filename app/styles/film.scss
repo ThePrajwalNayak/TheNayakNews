@@ -1,7 +1,7 @@
 #film-content {
-  background-color: yellowgreen;
+  //background-color: yellowgreen;
   #filmArticle {
-    background-color: green;
+    // background-color: green;
     #filmLeft {
       //https://www.bootply.com/5l9bZ7ZOt6
       position: absolute;
@@ -10,16 +10,16 @@
       left: 0;
       overflow-y: scroll;
       .filmLeftArticles {
+        background-color: black;
         border: .1px solid white;
-        margin: 10px 0 0 0;
+        margin: 50px 0 0 0;
         padding: 10px;
         blockquote {
           border-left: none;
-          overflow: hidden; //margin-top: -50px;
-          //padding-top: -100px;
+          overflow: hidden;
           border-radius: 17px;
-          background-color: rgba(101, 109, 226, 0.9); // margin-top: 25px;
-          color: white; //width: 325px;
+          background-color: #9acd32;
+          color: white;
           box-shadow: 2px 2px 2px 2px #E0E0E0;
           .quotation-mark {
             margin-top: -10px;
@@ -28,27 +28,35 @@
             color: white;
           }
           .quote-text {
-                font-size: 25px;
-    margin-top: -65px;
-    word-spacing: 7px;
-    letter-spacing: 2px;
+            font-size: 25px;
+            margin-top: -65px;
+            word-spacing: 7px;
+            letter-spacing: 2px;
           }
           .quote-author {
             font-size: 25px;
-                letter-spacing: 2px;  
+            letter-spacing: 2px;
+            .articlePosted {
+              float: right;
+            }
           }
         }
         .filmLeftArticlesDescription {
-          border: 1px solid black;
-          border-radius: 2px;
-          background-color: rgba(198, 200, 216, 0.9);
+          border: 1px solid white;
+          border-radius: 6px;
+          background-color: #9acd32;
           padding: 10px 15px;
           word-spacing: 2px;
           font-size: 17px;
           letter-spacing: 2px;
-          .continueReading{
+          box-shadow: 2px 2px 2px 2px #E0E0E0;
+          color: white;
+          .continueReading {
             margin-left: 10px;
           }
+        }
+        .filmLeftArticlesDescription::first-letter {
+          font-size: bold;
         }
         .filmLeftArticlesImage {
           width: 100%;
@@ -56,7 +64,7 @@
         }
         .filmLeftArticlesImage:hover {
           cursor: pointer;
-          opacity: 0.5;
+          opacity: 0.8;
         }
       }
     }
@@ -68,8 +76,12 @@
       bottom: 0;
       right: 0;
       overflow-y: scroll;
+      h2 {
+        text-align: center;
+        margin: 30px 0 0 0;
+      }
       .filmRightArticles {
-        margin: 100px 10px;
+        margin: 50px 10px;
         padding: 10px;
         .filmRightArticlesImage {
           width: 100%;
@@ -77,6 +89,8 @@
         }
         .filmRightArticlesImage:hover {
           cursor: pointer;
+          transform: scale(1.2);
+          margin-bottom: 25px;
         }
       }
     }

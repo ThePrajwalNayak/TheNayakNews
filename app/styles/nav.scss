@@ -3,6 +3,7 @@
         margin-bottom: 0 !important;
         border-radius: 0;
         .navbar-header {
+            margin-right: 200px !important;         
             img {
                 position: absolute;
                 top: 15px;
@@ -37,7 +38,7 @@
             padding-top: 15%;
             transition: all 0.2s ease-in-out;
         }
-        .fa-facebook {
+        .fa-github {
             background: #3b5998
         }
         .fa-linkedin {
@@ -59,19 +60,22 @@
     /* Styles */
     #nav-content {
         .navbar-header {
-            img {
-  
-                left: 180px !important;
-            }
             .navbar-brand {
-                margin-left: 5px;
+                color: #9d9d9d;
+                position: relative;
+                left: 60%;
+            }
+            img {
+                left: 97px !important;
             }
         }
         .navbar-nav {
             margin-left: 10px;
         }
         ul li {
-            width: 25%;
+            float: left;
+            width: 33%;
+            text-align: center;
         }
         #followNayak {
             h4 {

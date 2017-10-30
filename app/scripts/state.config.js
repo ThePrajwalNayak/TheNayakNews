@@ -23,6 +23,7 @@ angular.module('TheNayakNews').config(['$stateProvider', '$urlRouterProvider', '
             templateUrl: "views/sports.html",
             controller: 'sportsController'
         });
-    $locationProvider.html5Mode(true);
+   // $locationProvider.html5Mode(true);
+ 
 
 }]);

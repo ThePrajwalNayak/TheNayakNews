@@ -1,7 +1,7 @@
 'use strict'
 
 
-angular.module('TheNayakNews').controller('filmController', ['$scope', 'webService', function ($scope, webService) {
+angular.module('TheNayakNews').controller('filmController', ['$scope', 'webService','$location' , '$anchorScroll','$window', function ($scope, webService,$location ,$anchorScroll,$window) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var filmRightUrl = "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=" + apiKey;
@@ -62,4 +62,9 @@ angular.module('TheNayakNews').controller('filmController', ['$scope', 'webServi
   $scope.redirectToOriginalSite = function (url) {
     window.open(url);
   }
+
+ 
+$scope.backToTop = function() {
+          //$("html, body").animate({ scrollTop: 0 }, 1000);
+      }
 }]);

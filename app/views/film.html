@@ -3,15 +3,15 @@
         <div id="filmLeft" class="col-md-7">
             <div class="filmLeftArticles" ng-repeat="filmLeftArticle in filmLeftArticles">
                 <blockquote class="quote-box">
-                          <p class="quotation-mark">“</p>
+                    <p class="quotation-mark">“</p>
                     <p class="quote-text">{{filmLeftArticle.title}}</p>
                     <hr>
-                    <p class="quote-author">-{{filmLeftArticle.author}}</p>
+                    <p class="quote-author">{{filmLeftArticle.author}}<span class="articlePosted">{{filmLeftArticle.publishedAt | date}}</span></p>
                 </blockquote>
-                <p class="filmLeftArticlesDescription">{{filmLeftArticle.description}}<span class="continueReading"><a href="{{filmLeftArticle.url}}" target="_blank">Continue reading >></a></span><p>
-                <img class="filmLeftArticlesImage" ng-src="{{filmLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmLeftArticle.url)"
-                    target="_blank" />
-                
+                <p class="filmLeftArticlesDescription">{{filmLeftArticle.description}}<span class="continueReading"><a href="{{filmLeftArticle.url}}" target="_blank">Continue reading >></a></span>
+                    <p>
+                        <img class="filmLeftArticlesImage" ng-src="{{filmLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmLeftArticle.url)"
+                            target="_blank" />
             </div>
         </div>
         <div id="filmRight" class="col-md-4">
@@ -19,7 +19,7 @@
             <div class="filmRightArticles" ng-repeat="filmRightArticle in filmRightArticles">
                 <blockquote>
                     <h1>{{filmRightArticle.title}}</h1>
-                    <h4>-{{filmRightArticle.author}}</h4>
+                    <h4>{{filmRightArticle.author}}</h4>
                 </blockquote>
                 <img class="filmRightArticlesImage" ng-src="{{filmRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(filmRightArticle.url)"
                     target="_blank" />
@@ -27,5 +27,6 @@
                     <p>
             </div>
         </div>
+        <button style="position: fixed; bottom:0; left : 0" type="button" scrollable ng-click="backToTop()">Back to Top</button>
     </div>
 </div>
