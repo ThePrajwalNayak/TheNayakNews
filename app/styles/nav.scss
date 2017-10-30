@@ -59,6 +59,8 @@
 @media only screen and (max-width: 384px) {
     /* Styles */
     #nav-content {
+.navbar{
+    padding-top: 20px;
         .navbar-header {
             .navbar-brand {
                 color: #9d9d9d;
@@ -66,10 +68,12 @@
                 left: 60%;
             }
             img {
-                left: 97px !important;
+                left: 23% !important;
+    top: 34px;
             }
         }
         .navbar-nav {
+
             margin-left: 10px;
         }
         ul li {
@@ -82,10 +86,11 @@
                 display: none;
             }
             float: none !important;
-            margin: 10px 0;
+            margin: 30px;
             ul li {
                 width: 20%;
             }
         }
+    }
     }
 }

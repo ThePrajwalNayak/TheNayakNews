@@ -7,7 +7,7 @@
                  <h4>-{{sportsLeftArticle.author}}</h4>
                 </blockquote>
                 <img class="sportsLeftArticlesImage" ng-src="{{sportsLeftArticle.urlToImage}}" ng-click="redirectToOriginalSite(sportsLeftArticle.url)" target="_blank" />
-                <p class="sportsLeftArticlesDescription">{{sportsLeftArticle.description}}<p>
+                <p class="sportsLeftArticlesDescription">{{sportsLeftArticle.description}}<span class="continueReading"><a href="{{sportsLeftArticle.url}}" target="_blank">Continue reading >></a></span><p>
             </div>
         </div>
         <div  id="sportsRight" class="col-md-4">
@@ -18,8 +18,9 @@
                  <h4>-{{sportsRightArticle.author}}</h4>
                 </blockquote>
                 <img class="sportsRightArticlesImage" ng-src="{{sportsRightArticle.urlToImage}}" ng-click="redirectToOriginalSite(sportsRightArticle.url)" target="_blank" />
-                <p class="sportsRightArticlesDescription">{{sportsRightArticle.description}}<p>
+                <p class="sportsRightArticlesDescription">{{sportsRightArticle.description}}<span class="continueReading"><a href="{{sportsRightArticle.url}}" target="_blank">Continue reading >></a></span><p>
             </div>
         </div>
+         <button id="sportsBackToTop" type="button" scrollable ng-click="backToTop()">Back to Top</button>
     </div>
 </div>
