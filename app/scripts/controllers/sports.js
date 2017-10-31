@@ -6,6 +6,7 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var sportsRightUrl = " https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=" + apiKey;
   var sportsLeftUrl = "https://newsapi.org/v1/articles?source=espn-cric-info&sortBy=latest&apiKey=" + apiKey;
+  $scope.showSports = false;
   initialize();
 
   function initialize() {
@@ -51,7 +52,8 @@ angular.module('TheNayakNews').controller('sportsController', ['$scope', 'webSer
             publishedAt: value.publishedAt
           }
           $scope.sportsRightArticles.push(sportsNews);
-        })
+        });
+        $scope.showSports = true;
       }
     },
       function (response) {

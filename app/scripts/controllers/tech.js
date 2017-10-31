@@ -6,6 +6,7 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var techRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
   var techLeftUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=" + apiKey;
+  $scope.showTech = false;
   initialize();
 
   function initialize() {
@@ -51,7 +52,8 @@ angular.module('TheNayakNews').controller('techController', ['$scope', 'webServi
             publishedAt: value.publishedAt
           }
           $scope.sportsRightArticles.push(techNews);
-        })
+        });
+        $scope.showTech = true;
       }
     },
       function (response) {

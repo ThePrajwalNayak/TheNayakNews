@@ -1,4 +1,4 @@
-<div id="film-content">
+<div id="film-content" >
     <div id="filmArticle" class="row">
         <div id="filmLeft" class="col-md-7">
             <div class="filmLeftArticles" ng-repeat="filmLeftArticle in filmLeftArticles">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div id="filmRight" class="col-md-4">
-            <h2>Top Headlines</h2>
+            <h2 ng-if="showFilm">Top Headlines</h2>
             <div class="filmRightArticles" ng-repeat="filmRightArticle in filmRightArticles">
                 <blockquote>
                     <h1>{{filmRightArticle.title}}</h1>

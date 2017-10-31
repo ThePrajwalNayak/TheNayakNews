@@ -1,5 +1,5 @@
 'use strict';
-angular.module('TheNayakNews').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('TheNayakNews').config(['$stateProvider', '$urlRouterProvider',  function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, send to /business
     $urlRouterProvider.otherwise("/");
 
@@ -23,7 +23,7 @@ angular.module('TheNayakNews').config(['$stateProvider', '$urlRouterProvider', '
             templateUrl: "views/sports.html",
             controller: 'sportsController'
         });
-   // $locationProvider.html5Mode(true);
+
  
 
 }]);

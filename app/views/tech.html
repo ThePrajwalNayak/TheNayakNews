@@ -11,7 +11,7 @@
             </div>
         </div>
         <div  id="techRight" class="col-md-4">
-            <h2>Top Headlines</h2>
+            <h2 ng-if="showTech">Top Headlines</h2>
            <div class="techRightArticles" ng-repeat="techRightArticle in sportsRightArticles">
                 <blockquote>
                 <h1>{{techRightArticle.title}}</h1>

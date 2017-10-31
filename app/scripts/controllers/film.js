@@ -6,6 +6,8 @@ angular.module('TheNayakNews').controller('filmController', ['$scope', 'webServi
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
   var filmRightUrl = "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=" + apiKey;
   var filmLeftUrl = "https://newsapi.org/v1/articles?source=mtv-news&sortBy=latest&apiKey=" + apiKey;
+  
+  $scope.showFilm = false;
   initialize();
 
   function initialize() {
@@ -28,7 +30,8 @@ angular.module('TheNayakNews').controller('filmController', ['$scope', 'webServi
             publishedAt: value.publishedAt
           }
           $scope.filmLeftArticles.push(filmNews);
-        })
+        });
+        $scope.showFilm = true;
       }
     },
       function (response) {
