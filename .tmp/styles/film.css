@@ -1,11 +1,3 @@
-/* line 1, ../../app/styles/film.scss */
-#film-content {
-  background-color: yellowgreen;
-}
-/* line 3, ../../app/styles/film.scss */
-#film-content #filmArticle {
-  background-color: green;
-}
 /* line 5, ../../app/styles/film.scss */
 #film-content #filmArticle #filmLeft {
   position: absolute;
@@ -16,19 +8,74 @@
 }
 /* line 12, ../../app/styles/film.scss */
 #film-content #filmArticle #filmLeft .filmLeftArticles {
-  margin: 10px 0 0 0;
+  background-color: black;
+  border: .1px solid white;
+  margin: 50px 0 0 0;
   padding: 10px;
 }
-/* line 15, ../../app/styles/film.scss */
+/* line 17, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles blockquote {
+  border-left: none;
+  overflow: hidden;
+  border-radius: 17px;
+  background-color: #9acd32;
+  color: white;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+/* line 24, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles blockquote .quotation-mark {
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+}
+/* line 30, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles blockquote .quote-text {
+  font-size: 25px;
+  margin-top: -65px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+}
+/* line 36, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles blockquote .quote-author {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+/* line 39, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles blockquote .quote-author .articlePosted {
+  float: right;
+}
+/* line 44, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesDescription {
+  border: 1px solid white;
+  border-radius: 6px;
+  background-color: #9acd32;
+  padding: 10px 15px;
+  word-spacing: 2px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+  color: white;
+}
+/* line 54, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesDescription .continueReading {
+  margin-left: 10px;
+}
+/* line 58, ../../app/styles/film.scss */
+#film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesDescription::first-letter {
+  font-size: bold;
+}
+/* line 61, ../../app/styles/film.scss */
 #film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage {
   width: 100%;
   height: auto;
 }
-/* line 19, ../../app/styles/film.scss */
+/* line 65, ../../app/styles/film.scss */
 #film-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
-/* line 24, ../../app/styles/film.scss */
+/* line 71, ../../app/styles/film.scss */
 #film-content #filmArticle #filmRight {
   margin-right: 20px;
   background-color: yellowgreen;
@@ -38,18 +85,66 @@
   right: 0;
   overflow-y: scroll;
 }
-/* line 32, ../../app/styles/film.scss */
+/* line 79, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight h2 {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+/* line 83, ../../app/styles/film.scss */
 #film-content #filmArticle #filmRight .filmRightArticles {
-  margin: 100px 10px;
+  margin: 50px 10px;
   padding: 10px;
 }
-/* line 35, ../../app/styles/film.scss */
+/* line 86, ../../app/styles/film.scss */
 #film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage {
   width: 100%;
   height: auto;
 }
-/* line 39, ../../app/styles/film.scss */
+/* line 90, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesDescription {
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+/* line 93, ../../app/styles/film.scss */
+#film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesDescription .continueReading {
+  margin-left: 10px;
+}
+/* line 97, ../../app/styles/film.scss */
 #film-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage:hover {
   cursor: pointer;
+  transform: scale(1.2);
+  margin-bottom: 25px;
 }
+/* line 104, ../../app/styles/film.scss */
+#film-content #filmArticle #filmBackToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #090909;
+  height: 50px;
+  font-size: larger;
+  letter-spacing: 2px;
+  background-color: #ef1313;
+}
+
+@media only screen and (max-width: 384px) {
+  /* Styles */
+  /* line 122, ../../app/styles/film.scss */
+  #film-content #filmLeft {
+    width: 100%;
+    position: static !important;
+  }
+  /* line 126, ../../app/styles/film.scss */
+  #film-content #filmRight {
+    width: 100%;
+    position: static !important;
+  }
+  /* line 130, ../../app/styles/film.scss */
+  #film-content #filmBackToTop {
+    display: block !important;
+  }
+}
+
 /*# sourceMappingURL=film.css.map */

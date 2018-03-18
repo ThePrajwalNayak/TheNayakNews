@@ -1,35 +1,41 @@
-/* line 1, ../../app/styles/tech.scss */
-#tech-content {
-  background-color: yellowgreen;
-}
-/* line 3, ../../app/styles/tech.scss */
-#tech-content #filmArticle {
-  background-color: green;
-}
-/* line 5, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmLeft {
+/* line 4, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft {
   position: absolute;
   top: 80px;
   bottom: 0;
   left: 0;
   overflow-y: scroll;
 }
-/* line 12, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmLeft .filmLeftArticles {
+/* line 11, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles {
   margin: 10px 0 0 0;
   padding: 10px;
 }
-/* line 15, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage {
+/* line 16, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles blockquote h4 span {
+  margin-right: 10px;
+}
+/* line 21, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles .techLeftArticlesImage {
   width: 100%;
   height: auto;
 }
-/* line 19, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmLeft .filmLeftArticles .filmLeftArticlesImage:hover {
+/* line 25, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles .techLeftArticlesImage:hover {
   cursor: pointer;
 }
-/* line 24, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmRight {
+/* line 28, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles .techLeftArticlesDescription {
+  margin-top: 10px;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+}
+/* line 32, ../../app/styles/tech.scss */
+#tech-content #techArticle #techLeft .techLeftArticles .techLeftArticlesDescription .continueReading {
+  margin-left: 10px;
+}
+/* line 38, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight {
   margin-right: 20px;
   background-color: yellowgreen;
   position: absolute;
@@ -38,19 +44,64 @@
   right: 0;
   overflow-y: scroll;
 }
-/* line 32, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmRight .filmRightArticles {
-  margin: 100px 10px;
+/* line 46, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight h2 {
+  text-align: center;
+}
+/* line 49, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight .techRightArticles {
+  margin: 50px 10px;
   padding: 10px;
 }
-/* line 35, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage {
+/* line 52, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight .techRightArticles .techRightArticlesImage {
   width: 100%;
   height: auto;
 }
-/* line 39, ../../app/styles/tech.scss */
-#tech-content #filmArticle #filmRight .filmRightArticles .filmRightArticlesImage:hover {
+/* line 56, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight .techRightArticles .techRightArticlesImage:hover {
   cursor: pointer;
+}
+/* line 59, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight .techRightArticles .techRightArticlesDescription {
+  margin-top: 10px;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+/* line 63, ../../app/styles/tech.scss */
+#tech-content #techArticle #techRight .techRightArticles .techRightArticlesDescription .continueReading {
+  margin-left: 10px;
+}
+/* line 69, ../../app/styles/tech.scss */
+#tech-content #techArticle #techBackToTop {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #090909;
+  height: 50px;
+  font-size: larger;
+  letter-spacing: 2px;
+  background-color: #ef1313;
+}
+
+@media only screen and (max-width: 384px) {
+  /* Styles */
+  /* line 87, ../../app/styles/tech.scss */
+  #tech-content #techLeft {
+    width: 100%;
+    position: static !important;
+  }
+  /* line 91, ../../app/styles/tech.scss */
+  #tech-content #techRight {
+    width: 100%;
+    position: static !important;
+  }
+  /* line 95, ../../app/styles/tech.scss */
+  #tech-content #techBackToTop {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=tech.css.map */
