@@ -4,7 +4,7 @@
 angular.module('TheNayakNews').controller('techController', ['$scope', 'webService', function ($scope, webService) {
 
   var apiKey = "74c20057e29e4641a38b5d00c39bd93f";
-  var techRightUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=top&apiKey=" + apiKey;
+  var techRightUrl = "https://newsapi.org/v2/top-headlines?sources=techradar&apiKey=" + apiKey;
   var techLeftUrl = "https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=" + apiKey;
   $scope.showTech = false;
   initialize();
