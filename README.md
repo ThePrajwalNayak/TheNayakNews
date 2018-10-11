@@ -24,3 +24,17 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Getting Started
+
+git clone https://github.com/ThePrajwalNayak/Webapp-TheNayakNewsgit
+
+cd Webapp-TheNayakNews
+
+npm install
+
+grunt serve
+
+## Technology
+
+HTML5, CSS3, Angular.js, SCSS
