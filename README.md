@@ -1,4 +1,4 @@
-# the-nayak-news
+# The Nayak News
 
 News website
 
