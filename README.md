@@ -2,6 +2,8 @@
 
 News website
 
+Demo - https://theprajwalnayak.github.io/Webapp-TheNayakNews/#!/
+
 ## Screen Shots
 
 ### Landing Page
