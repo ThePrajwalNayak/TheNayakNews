@@ -1,7 +1,21 @@
 # the-nayak-news
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+News website
+
+## Screen Shots
+
+### Landing Page
+![](./ScreenShots/Landing%20Page.png)
+
+---
+
+### Tech News
+![](./ScreenShots/Tech%20News.png)
+
+---
+
+### Sports News
+![](./ScreenShots/Sports%20News.png)
 
 ## Build & development
 
